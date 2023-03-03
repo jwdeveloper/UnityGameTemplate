@@ -1,4 +1,5 @@
 using System;
+using api.events;
 using UnityEngine;
 
 namespace api.injection
@@ -8,6 +9,8 @@ namespace api.injection
         private void Awake()
         {
             Injector.Inject(this);
+            var eventInvoker = FindObjectOfType<EventInvoker>();
+            eventInvoker.RegisterListeners(this);
             OnAwake();
         }
         

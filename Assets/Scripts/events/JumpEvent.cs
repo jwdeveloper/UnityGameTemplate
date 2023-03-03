@@ -1,7 +1,6 @@
 using api.events;
-using UnityEngine;
 
-namespace DefaultNamespace
+namespace events
 {
     public class JumpEvent : GameEvent
     {

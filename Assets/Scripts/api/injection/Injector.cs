@@ -18,13 +18,13 @@ namespace api.injection
                                          BindingFlags.Instance);
             foreach (var field in fields)
             {
-                if (!field.HasAttribute(typeof(Injection)))
+                if (!field.HasAttribute(typeof(Inject)))
                 {
                     continue;
                 }
 
                 var fieldType = field.GetAccessorType();
-                var attribute = field.GetAttribute<Injection>();
+                var attribute = field.GetAttribute<Inject>();
                 object value = null;
                 if (IsList(fieldType))
                 {

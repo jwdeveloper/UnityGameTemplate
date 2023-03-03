@@ -11,6 +11,7 @@ namespace api.events
         {
             base.OnInspectorGUI();
 
+            
             EventInvoker invoker = (EventInvoker)target;
             var events = invoker.RegisteredEvents;
             foreach(var eventType in events.Keys)

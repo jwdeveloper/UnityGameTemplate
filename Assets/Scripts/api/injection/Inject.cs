@@ -4,14 +4,14 @@ using UnityEngine;
 namespace api.injection
 {
     [AttributeUsage(AttributeTargets.Field)]
-    public class Injection : Attribute
+    public class Inject : Attribute
     {
         
         private readonly InjectionType _injectionType;
 
         public InjectionType InjectionType => _injectionType;
 
-        public Injection(InjectionType name)
+        public Inject(InjectionType name = InjectionType.FindObject)
         {
             this._injectionType = _injectionType;
         }
